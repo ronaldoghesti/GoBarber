@@ -6,8 +6,16 @@ import GlobalStyle from './styles/global';
 import AppProvider from './hooks';
 
 import Routes from './routes';
-import SignIn from './pages/SignIn';
 
-const App: React.FC = () => <SignIn />;
+const App: React.FC = () => (
+  <>
+    <AppProvider>
+      <Router>
+        <Routes />
+      </Router>
+    </AppProvider>
+    <GlobalStyle />
+  </>
+);
 
 export default App;
